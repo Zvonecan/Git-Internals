@@ -1,6 +1,6 @@
 # Unutarnja-struktura-Git-a-i-implementacija-osnovnih-komandi-Git-Internals-
 
-##Članovi tima
+Članovi tima:
 
 Adrian Bralić Toth
 
