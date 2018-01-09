@@ -2,8 +2,8 @@
 
 Članovi tima:
 
-Adrian Bralić Toth
+Adrian Bralić Toth - adrian.bralic@gmail.com
 
-Anton Frlan
+Anton Frlan - zvonecan1@gmail.com
 
-Marin Jansky
+Marin Jansky - wannabeeftw@gmail.com
