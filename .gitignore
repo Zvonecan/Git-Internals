@@ -1,0 +1,13 @@
+#Latex temp files
+*.pdf
+*.log
+*.nav
+*.out
+*.snm
+*.gz
+*.toc
+*.xdv
+*.aux
+*.fdb_latexmk
+*.fls
+*.int.tex
