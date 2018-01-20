@@ -22,3 +22,11 @@
 		\item{Datoteka FETCH\_HEAD sadrži jedinstveni hash commita kad je zadnji put napravljen fetch sa udaljenog repozitorija te ime grane i lokaciju udaljenog repozitorija}
 	\end{itemize}
 \end{frame}
+\begin{frame}{Direktorij refs/}
+	\begin{itemize}
+		\item{Direktorij refs sadrži sadrži poddirektorije heads, remotes i tags te datoteku stash koja sadrži hash privremenog commita sa stashanim promjenama}
+		\item{Direktorij refs/heads sadrži datoteku za svaku granu u repozitoriju u kojima je zapisan hash zadnjeg commita u pojedinoj grani}
+		\item{Sličan direktoriju refs/heads, refs/remotes razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
+		\item{Unutar direktorija refs/tags nalaze se datoteke sa svim tagovima koji se koriste u repozitoriju a u njima je zapisan hash commita koji je tagiran tim tagovima}
+	\end{itemize}
+\end{frame}
