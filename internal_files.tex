@@ -32,9 +32,17 @@
 \end{frame}
 \begin{frame}{Direktorij refs/}
 	\begin{itemize}
-		\item{Direktorij refs sadrži sadrži poddirektorije heads, remotes i tags te datoteku stash koja sadrži hash privremenog commita sa stashanim promjenama}
+		\item{Direktorij refs/ sadrži sadrži poddirektorije heads, remotes i tags te datoteku stash koja sadrži hash privremenog commita sa stashanim promjenama}
 		\item{Direktorij refs/heads sadrži datoteku za svaku granu u repozitoriju u kojima je zapisan hash zadnjeg commita u pojedinoj grani}
-		\item{Sličan direktoriju refs/heads, refs/remotes razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
+		\item{Sličan direktoriju refs/heads, direktorij refs/remotes razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
 		\item{Unutar direktorija refs/tags nalaze se datoteke sa svim tagovima koji se koriste u repozitoriju a u njima je zapisan hash commita koji je tagiran tim tagovima}
+	\end{itemize}
+\end{frame}
+\begin{frame}{Ostali direktoriji i datoteke}
+	\begin{itemize}
+		\item{Najvažniji direktorij git sustava je objects/, u tom direktoriju spremaju se sve datoteke, promjene i commitovi}
+		\item{hooks/ direktorij sadrži 11 datoteka sa skriptama koje se pokreću na određeni događaj (npr. kada napravimo commit)}
+		\item{U datoteci index pohranjene su sve promjene od zadnjeg commita dodane u stage u binarnom obliku}
+		\item{Datoteka info/exclude radi na sličnom principu kao .gitignore, ali se veže globalno za cijeli repozitorij i ne može se commitati kao .gitignore}
 	\end{itemize}
 \end{frame}
