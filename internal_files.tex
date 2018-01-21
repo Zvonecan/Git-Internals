@@ -14,11 +14,11 @@
 \end{frame}
 \begin{frame}{Datoteka config}
 	\begin{itemize}
-		\item{Datoteka config unutar .git direktorija sadrži osnovne podatke o repozitoriju kao što je popis svih povezanih udaljenih repozitorija, poveznicu na master granu zadanog default repozitorija i interne opcije kao što je osjetljivost na velika i mala slova}
+		\item{Datoteka config unutar .git direktorija sadrži osnovne podatke o repozitoriju kao što je popis svih povezanih udaljenih repozitorija, poveznicu na master granu zadanog default repozitorija, interne opcije kao što je osjetljivost na velika i mala slova i još nekoliko postavki vezanih uz sam repozitorij}
 	\end{itemize}
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.65\linewidth]{img/config.png}
+		\includegraphics[width=0.6\linewidth]{img/config.png}
 		\caption{Primjer config datoteke}
 	\end{figure}
 \end{frame}
@@ -34,7 +34,7 @@
 	\begin{itemize}
 		\item{Direktorij refs/ sadrži sadrži poddirektorije heads, remotes i tags te datoteku stash koja sadrži hash privremenog commita sa stashanim promjenama}
 		\item{Direktorij refs/heads sadrži datoteku za svaku granu u repozitoriju u kojima je zapisan hash zadnjeg commita u pojedinoj grani}
-		\item{Sličan direktoriju refs/heads, direktorij refs/remotes razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
+		\item{Sličan direktoriju refs/heads je direktorij refs/remotes i razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
 		\item{Unutar direktorija refs/tags nalaze se datoteke sa svim tagovima koji se koriste u repozitoriju a u njima je zapisan hash commita koji je tagiran tim tagovima}
 	\end{itemize}
 \end{frame}
