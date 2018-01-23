@@ -1,4 +1,4 @@
-\documentclass[]{beamer}
+\documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usetheme{Copenhagen}
 \usecolortheme{seahorse}
@@ -16,23 +16,25 @@
 
 \begin{itemize}
 	\setlength\itemsep{2em}
-	\item git init stvori .git datoteku te ostale u njoj napravi jos neke datoteke potrebne za rad git-a
+	\item Git init stvori .git datoteku te ostale u njoj napravi još neke datoteke potrebne za rad git-a.
 	\begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth]{./slike/git_datoteka.jpg}
+\includegraphics[width=0.9\textwidth]{./slike/git_datoteka.png}
 \end{figure}
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Clone i config}
 
-\begin{itemize}{Clone & config}
-	\item Clone funkcionira vrlo slicno git initu, ali kopira vec gotov repozitrorij s udaljene lokacije.
+\begin{itemize}
+	\item Clone funkcionira vrlo slično git initu, ali kopira već gotov repozitrorij s udaljene lokacije.
+\end{itemize}
 	\begin{figure}
-	\includegraphics[width=0.9\textwidth]{./slike/b.jpg}
+		\includegraphics[width=0.9\textwidth]{./slike/b.png}
 	\end{figure}
-	\item Pomocu naredbe config postavljamo username i email od korisnika
+\begin{itemize}
+	\item Pomoću naredbe config postavljamo username i email od korisnika
 \end{itemize}
 
 \end{frame}
@@ -43,10 +45,10 @@
 
 \begin{itemize}
 	\setlength\itemsep{2.5em}
-	\item git commit git izvrsava tako da datoteku spremi pod kljuc zvan SHA-1
-	\item SHA-1 je kombinacija od 40 malih slova ili brojeva koja sluzi kao pointer na spremljenu datoteku
-	\item pomocu komande git hash-object mozemo spremi neki file u git te dodavanjem -w nam git vraca SHA-2 od tog file-a
-	\item pomocu git hash-object spremamo neki file pod SHA-2 kao blob i mozemo mu pristupiti samo pomocu SHA-2 kljuca
+	\item Git commit git izvršava tako da datoteku spremi pod ključ zvan SHA-1.
+	\item SHA-1 je kombinacija od 40 malih slova ili brojeva koja služi kao pointer na spremljenu datoteku.
+	\item Pomoću komande git hash-object možemo spremi neki file u git te dodavanjem -w nam git vraća SHA-1 od tog filea.
+	\item Pomoću git hash-object spremamo neki file pod SHA-1 kao blob i možemo mu pristupiti samo pomoću SHA-1 ključa.
 \end{itemize}
 
 \end{frame}
@@ -54,7 +56,7 @@
 \begin{frame}{git commit}
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth]{./slike/druga_slika.jpg}
+\includegraphics[width=0.9\textwidth]{./slike/druga_slika.png}
 \end{figure}
 
 \end{frame}
@@ -62,41 +64,44 @@
 \begin{frame}{git commit}
 
 \begin{itemize}
-	\item git rjesava taj problem pomocu stabala
-	\item blob je neki podatak / tekst dok je stablo vise bloboa i barem 2 stablo od kojih 2 stablo ima SHA-2 te datoteke ili stabla koji ga ima
+	\item Git rješava taj problem pomoću stabala.
+	\item Blob je neki podatak ili tekst dok je stablo vise blobova i barem jedno stablo od kojih jedno stablo ima SHA-1 te datoteke ili stabla koji ga sadrži.
 	\begin{figure}
 		\centering
-	\includegraphics[width=0.8\textwidth]{./slike/treca_slika.jpg}
+	\includegraphics[width=0.5\textwidth]{./slike/treca_slika.png}
 	\end{figure}
-	\item kada git commita file on obicno uzme sto je na stage-u i spremi u jedno stablo ili kombinaciju stabla koji su svi spremljeni pod jedno stablo
+	\item Kada git commita file on obično uzme sto je na stage-u i spremi u jedno stablo ili kombinaciju stabala koji su svi spremljeni pod jedno stablo.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{git stage}
 
 \begin{itemize}
-	\item file u gitu stage-amo tako da ga dodamo u pod datoteku index unutar .git datoteke
-	\item file dodajemo u index pomocu git update-index --add
+	\item File u gitu stageamo tako da ga dodamo u pod datoteku index unutar .git datoteke.
+	\item File dodajemo u index pomoću git update-index --add.
 	\begin{figure}
 		\centering
-	\includegraphics[width=0.8\textwidth]{./slike/cetvrta_slika.jpg}
+	\includegraphics[width=0.7\textwidth]{./slike/cetvrta_slika.png}
 	\end{figure}
-	\item ako zelimo stage-a neki prijasnji commit prije imena file-a moramo doda --cached i SHA-2 tog file-a
-	\item sad mozemo napraviti istu stvar sto git radi sa file-ovima u indexu , stablo
-	\begin{figure}
-		\centering
-	\includegraphics[width=1\textwidth]{./slike/peta_slika.jpg}
-	\end{figure}
+	\item Ako želimo stagea neki prijašnji commit prije imena filea moramo dodat --cached i SHA-1 tog filea.
+	\item Sad mozemo napraviti istu stvar što git radi sa fileovima u indexu , stablo.
+	
 		
 \end{itemize}
 
 
 \end{frame}
+\begin{frame}{git stage}
+	\begin{figure}
+		\centering
+	\includegraphics[width=0.7\textwidth]{./slike/peta_slika.png}
+	\end{figure}
+\end{frame}
 
 \begin{frame}{git stage}
 	\begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/sesta_slika.jpg}
+	\includegraphics[width=0.8\textwidth]{./slike/sesta_slika.png}
 	\end{figure}
 
 
@@ -105,17 +110,17 @@
 \begin{frame}{git commit}
 
 \begin{itemize}
-	\item sad samo commitamo stablo koje smo napravili te smo izvrsili istu stvar koju git napravi kada nesto add-amo i commit-amo
+	\item Sad samo commitamo stablo koje smo napravili te smo izvršili istu stvar koju git napravi kada nešto addamo i commitamo.
 	\begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/sedma_slika.jpg}
+	\includegraphics[width=.8\textwidth]{./slike/sedma_slika.png}
 	\end{figure}
 \end{itemize}
 \end{frame}
 \begin{frame}{Branching}
 	\begin{itemize}
 	\item Jedna on najbitnijih stvari u gitu je grananje.
-	\item Ono omogucuje razvijanje i debugiranje zasebnih featura bez remecenja glavnog programa. 
+	\item Ono omogućuje razvijanje i debugiranje zasebnih featura bez remećenja glavnog programa. 
 	\item Za ovo se mogu koristi reference koje zamijene neki SHA-1 proizvoljnim imenom i odonda se toj novoj grani moze pristupati tim imenom, to jest prati HEAD te grane.
 	\end{itemize}
 	
@@ -123,31 +128,31 @@
 \begin{frame}{Branching}
 \begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/a.jpg}
+	\includegraphics[width=1\textwidth]{./slike/a.png}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{Merge}
 \begin{itemize}
-	\item git merge usporeduje znakove na svim lokacijama i ako postoje mjesta na kojima nisu ista ih stavi odvoji i stavi jedno ispod drugog
+	\item Git merge uspoređuje znakove na svim lokacijama i ako postoje mjesta na kojima nisu isti ih odvoji i stavi jedno ispod drugog.
 \end{itemize}
 \begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/merge1.jpg}
-	\includegraphics[width=1\textwidth]{./slike/merge2.jpg}
+	\includegraphics[width=.6\textwidth]{./slike/merge1.png}
+	\includegraphics[width=.6\textwidth]{./slike/merge2.png}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{Merge}
 \begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/git_merge.jpg}
+	\includegraphics[width=.6\textwidth]{./slike/git_merge.png}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{HEAD}
 	\begin{itemize}
-	\item Odmah nakon prvog commita u gitu, prvi se i onda svaki sljedeci commit oznacuje kao HEAD.
+	\item Odmah nakon prvog commita u gitu, prvi se i onda svaki sljedeći commit oznacuje kao HEAD.
 	\item HEAD je referenca koja pokazuje na granu na kojoj se trenutno nalazimo, makar postojala samo jedna.
 	\end{itemize}
 \end{frame}
@@ -155,8 +160,8 @@
 	\begin{itemize}
 	\item Tagovi su vrsta referenci i postoje lightweight and annoted.
 	\begin{itemize}
-	\item Lightweight su vrsta referenci koji se ne micu, umjesto ostajuci na jednom commitu
-	\item Annoted su slozeniji tagovi koji stvore vlastiti objekt koji ima svoju referencu.
+	\item Lightweight su vrsta referenci koji se ne miču, umjesto ostajući na jednom commitu
+	\item Annoted su složeniji tagovi koji stvore vlastiti objekt koji ima svoju referencu.
 	\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -167,15 +172,15 @@
 \end{frame}
 \begin{frame}{Remote}
 	\begin{itemize}
-	\item Remote je vrsta referenci koja se pokazuje na udaljeni repozitorij pomocu kojih se moze fetchati(povuci s udaljenog repozitorija da mozemo pogledati sadrzaj), pushati (poslati na repozitorij) i pullati (povuci s udaljenog repozitorija te merga) sadrzaj tih repozitorija.  
+	\item Remote je vrsta referenci koja se pokazuje na udaljeni repozitorij pomoću kojih se može fetchati(povući s udaljenog repozitorija da mozemo pogledati sadržaj), pushati (poslati na repozitorij) i pullati (povucć s udaljenog repozitorija te mergati) sadržaj tih repozitorija.  
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Remov, diff i status}
 	\begin{itemize}
-	\item Remove sluzi za brisanje pojedinih fileova iz trenutacne datoteke.
-	\item Status usporeduje zadnju commitanu verziju s onim sto je napisano poslije i gleda jesu li te razlike stageane kako bi se mogle commitati.
-	\item Diff usporeduje razlike izmedu zadnje commitane verzije i prvo stageanih promjena, ako nema onda svih promjena te ih ispisuje, a dodatci su zeleni i oznaceni s plusom, a sto je izbrisano je crveno s minusom.
+	\item Remove služi za brisanje pojedinih fileova iz trenutačne datoteke.
+	\item Status uspoređuje zadnju commitanu verziju s onim sto je napisano poslije i gleda jesu li te razlike stageane kako bi se mogle commitati.
+	\item Diff uspoređuje razlike izmedu zadnje commitane verzije i prvo stageanih promjena, ako nema onda svih promjena te ih ispisuje, a dodatci su zeleni i označeni s plusom, a što je izbrisano je crveno s minusom.
 	\end{itemize}
 \end{frame}
 \begin{frame}
@@ -186,7 +191,7 @@
 \begin{frame}{Log i stash}
 	\begin{itemize}
 	\item Log pokazuje povijest pojedinih grana. Tu se broje commitovi, autor, datum, vrijeme i reference.
-	\item Stash privremeno sakriva necommitane promjene ako se iz nekih razloga treba nesto napraviti bez njih. Promjene ostaju skrivene u stashu dok ih se ne povrati nazad na stage.
+	\item Stash privremeno sakriva necommitane promjene ako se iz nekih razloga treba nešto napraviti bez njih. Promjene ostaju skrivene u stashu dok ih se ne povrati nazad na stage.
 \end{frame}
 
 
