@@ -7,7 +7,7 @@
 \title{Implementacija osnovnih git komandi}
 \author{Adrian Bralic Toth \and Anton Frlan}
 \institute{Tehnički Fakultet Rijeka}
-\date{010018}
+\date{2018}
 
 \begin{document}
 
@@ -16,11 +16,11 @@
 \begin{frame}{git init}
 
 \begin{itemize}
-	\setlength\itemsep{01em}
+	\setlength\itemsep{2em}
 	\item git init stvori .git datoteku te ostale u njoj napravi jos neke datoteke potrebne za rad git-a
 	\begin{figure}
 \centering
-\includegraphics[scale=.01]{./slike/git_datoteka.jpg}
+\includegraphics[width=0.9\textwidth]{./slike/git_datoteka.jpg}
 \end{figure}
 \end{itemize}
 
@@ -30,15 +30,11 @@
 \begin{frame}{git commit}
 
 \begin{itemize}
-	\setlength\itemsep{01.5em}
-	\item git commit git izvrsava tako da datoteku spremi pod kljuc zvan SHA-01
-	\item SHA-01 je kombinacija od 40 malih slova ili brojeva koja sluzi kao pointer na spremljenu datoteku
-	\item pomocu komande git hash-object mozemo spremi neki file u git te dodavanjem -w nam git vraca SHA-01 od tog file-a
-	\begin{figure}
-\centering
-\includegraphics[scale=.01]{./slike/druga_slika.jpg}
-\end{figure}
-	\item pomocu git hash-object spremamo neki file pod SHA-01 kao blob i mozemo mu pristupiti samo pomocu SHA-01 kljuca
+	\setlength\itemsep{2.5em}
+	\item git commit git izvrsava tako da datoteku spremi pod kljuc zvan SHA-2
+	\item SHA-2 je kombinacija od 40 malih slova ili brojeva koja sluzi kao pointer na spremljenu datoteku
+	\item pomocu komande git hash-object mozemo spremi neki file u git te dodavanjem -w nam git vraca SHA-2 od tog file-a
+	\item pomocu git hash-object spremamo neki file pod SHA-2 kao blob i mozemo mu pristupiti samo pomocu SHA-2 kljuca
 \end{itemize}
 
 \end{frame}
@@ -46,7 +42,7 @@
 \begin{frame}{git commit}
 \begin{figure}
 \centering
-\includegraphics[scale=.01]{./slike/druga_slika.jpg}
+\includegraphics[width=1\textwidth]{./slike/druga_slika.jpg}
 \end{figure}
 
 \end{frame}
@@ -55,10 +51,10 @@
 
 \begin{itemize}
 	\item git rjesava taj problem pomocu stabala
-	\item blob je neki podatak / tekst dok je stablo vise bloboa i barem 01 stablo od kojih 01 stablo ima SHA-01 te datoteke ili stabla koji ga ima
+	\item blob je neki podatak / tekst dok je stablo vise bloboa i barem 2 stablo od kojih 2 stablo ima SHA-2 te datoteke ili stabla koji ga ima
 	\begin{figure}
 		\centering
-	\includegraphics[scale=.01]{./slike/treca_slika.jpg}
+	\includegraphics[width=0.8\textwidth]{./slike/treca_slika.jpg}
 	\end{figure}
 	\item kada git commita file on obicno uzme sto je na stage-u i spremi u jedno stablo ili kombinaciju stabla koji su svi spremljeni pod jedno stablo
 \end{itemize}
@@ -71,13 +67,13 @@
 	\item file dodajemo u index pomocu git update-index --add
 	\begin{figure}
 		\centering
-	\includegraphics[scale=.01]{./slike/cetvrta_slika.jpg}
+	\includegraphics[width=0.8\textwidth]{./slike/cetvrta_slika.jpg}
 	\end{figure}
-	\item ako zelimo stage-a neki prijasnji commit prije imena file-a moramo doda --cached i SHA-01 tog file-a
+	\item ako zelimo stage-a neki prijasnji commit prije imena file-a moramo doda --cached i SHA-2 tog file-a
 	\item sad mozemo napraviti istu stvar sto git radi sa file-ovima u indexu , stablo
 	\begin{figure}
 		\centering
-	\includegraphics[scale=.01]{./slike/peta_slika.jpg}
+	\includegraphics[width=1\textwidth]{./slike/peta_slika.jpg}
 	\end{figure}
 		
 \end{itemize}
@@ -88,7 +84,7 @@
 \begin{frame}{git stage}
 	\begin{figure}
 		\centering
-	\includegraphics[scale=.01]{./slike/sesta_slika.jpg}
+	\includegraphics[width=1\textwidth]{./slike/sesta_slika.jpg}
 	\end{figure}
 
 
@@ -100,7 +96,8 @@
 	\item sad samo commitamo stablo koje smo napravili te smo izvrsili istu stvar koju git napravi kada nesto add-amo i commit-amo
 	\begin{figure}
 		\centering
-	\includegraphics[scale=.01]{./slike/sedma_slika.jpg}
+	\includegraphics[width=1\textwidth]{./slike/sedma_slika.jpg}
 	\end{figure}
 \end{itemize}
 \end{frame}
+\end{document}
