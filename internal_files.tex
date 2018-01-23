@@ -1,0 +1,48 @@
+\begin{frame}{Interne datoteke}
+	\begin{itemize}
+		\item{Git unutar .git direktorija svakog repozitorija sprema datoteke koje sadrže informacije o repozitoriju}
+		\item{Neke od tih informacija su popis grana, promjene spremljene u index, konfiguracija, trenutno checkoutani commit ili grana i sl.}
+		\item{Git svim commitovima i podacima pridodaje jedinstvene ključeve (hasheve) koji se koriste za identificiranje i pristup tim podacima i koriste se u internim gitovim datotekama}
+	\end{itemize}
+\end{frame}
+\begin{frame}{Interne datoteke}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.6]{img/dir_structure.png}
+		\caption{Datotečna struktura .git direktorija}
+	\end{figure}
+\end{frame}
+\begin{frame}{Datoteka config}
+	\begin{itemize}
+		\item{Datoteka config unutar .git direktorija sadrži osnovne podatke o repozitoriju kao što je popis svih povezanih udaljenih repozitorija, poveznicu na master granu zadanog default repozitorija, interne opcije kao što je osjetljivost na velika i mala slova i još nekoliko postavki vezanih uz sam repozitorij}
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\linewidth]{img/config.png}
+		\caption{Primjer config datoteke}
+	\end{figure}
+\end{frame}
+\begin{frame}{Datoteke HEAD i FETCH\_HEAD}
+	\begin{itemize}
+		\item{Datoteka HEAD sadrži referencu na trenutno checkoutan commit ili granu}
+		\item{Ako je checkoutan commit onda datoteka sadrži jedinstveni hash tog commita (npr. 0e9dc3b589624f744f06b34450829382a61bfe44)}
+		\item{U slučaju da je checkoutana neka grana onda datoteka sadrži referencu do te grane u obliku: ref: refs/heads/<grana>}
+		\item{Datoteka FETCH\_HEAD sadrži jedinstveni hash commita kad je zadnji put napravljen fetch sa udaljenog repozitorija te ime grane i lokaciju udaljenog repozitorija}
+	\end{itemize}
+\end{frame}
+\begin{frame}{Direktorij refs/}
+	\begin{itemize}
+		\item{Direktorij refs/ sadrži sadrži poddirektorije heads, remotes i tags te datoteku stash koja sadrži hash privremenog commita sa stashanim promjenama}
+		\item{Direktorij refs/heads sadrži datoteku za svaku granu u repozitoriju u kojima je zapisan hash zadnjeg commita u pojedinoj grani}
+		\item{Sličan direktoriju refs/heads je direktorij refs/remotes i razlikuje se po tome što su u njemu zapisani isti podaci, ali za sve povezane udaljene repozitorije}
+		\item{Unutar direktorija refs/tags nalaze se datoteke sa svim tagovima koji se koriste u repozitoriju a u njima je zapisan hash commita koji je tagiran tim tagovima}
+	\end{itemize}
+\end{frame}
+\begin{frame}{Ostali direktoriji i datoteke}
+	\begin{itemize}
+		\item{Najvažniji direktorij git sustava je objects/, u tom direktoriju spremaju se sve datoteke, promjene i commitovi}
+		\item{hooks/ direktorij sadrži 11 datoteka sa skriptama koje se pokreću na određeni događaj (npr. kada napravimo commit)}
+		\item{U datoteci index pohranjene su sve promjene od zadnjeg commita dodane u stage u binarnom obliku}
+		\item{Datoteka info/exclude radi na sličnom principu kao .gitignore, ali se veže globalno za cijeli repozitorij i ne može se commitati kao .gitignore}
+	\end{itemize}
+\end{frame}
