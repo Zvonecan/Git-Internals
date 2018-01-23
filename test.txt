@@ -1,7 +1,9 @@
 Neki tekst verzija 2
 
-drugi commit
 
-d
+mujo
+haso commit
 
-Mala promjena
+durakovic
+
+Mala git "zabava"

@@ -25,6 +25,19 @@
 
 \end{frame}
 
+\begin{frame}
+
+\begin{itemize}{Clone & config}
+	\item Clone funkcionira vrlo slicno git initu, ali kopira vec gotov repozitrorij s udaljene lokacije.
+	\begin{figure}
+	\includegraphics[width=0.9\textwidth]{./slike/b.jpg}
+	\end{figure}
+	\item Pomocu naredbe config postavljamo username i email od korisnika
+\end{itemize}
+
+\end{frame}
+
+
 
 \begin{frame}{git commit}
 
@@ -120,7 +133,15 @@
 \end{itemize}
 \begin{figure}
 		\centering
-	\includegraphics[width=1\textwidth]{./slike/a.jpg}
+	\includegraphics[width=1\textwidth]{./slike/merge1.jpg}
+	\includegraphics[width=1\textwidth]{./slike/merge2.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Merge}
+\begin{figure}
+		\centering
+	\includegraphics[width=1\textwidth]{./slike/git_merge.jpg}
 	\end{figure}
 \end{frame}
 
@@ -146,8 +167,27 @@
 \end{frame}
 \begin{frame}{Remote}
 	\begin{itemize}
-	\item Remote je vrsta referenci koja se pokazuje na udaljeni repozitorij pomocu kojih se moze fetchati, pushati (poslati na repozitorij) i pullati (povuci s udaljenog repozitorija) sadrzaj tih repozitorija.  
+	\item Remote je vrsta referenci koja se pokazuje na udaljeni repozitorij pomocu kojih se moze fetchati(povuci s udaljenog repozitorija da mozemo pogledati sadrzaj), pushati (poslati na repozitorij) i pullati (povuci s udaljenog repozitorija te merga) sadrzaj tih repozitorija.  
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{Remov, diff i status}
+	\begin{itemize}
+	\item Remove sluzi za brisanje pojedinih fileova iz trenutacne datoteke.
+	\item Status usporeduje zadnju commitanu verziju s onim sto je napisano poslije i gleda jesu li te razlike stageane kako bi se mogle commitati.
+	\item Diff usporeduje razlike izmedu zadnje commitane verzije i prvo stageanih promjena, ako nema onda svih promjena te ih ispisuje, a dodatci su zeleni i oznaceni s plusom, a sto je izbrisano je crveno s minusom.
+	\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{figure}
+\includegraphics[width=1\textwidth]{./slike/c.png}
+\end{figure}
+\end{frame}
+\begin{frame}{Log i stash}
+	\begin{itemize}
+	\item Log pokazuje povijest pojedinih grana. Tu se broje commitovi, autor, datum, vrijeme i reference.
+	\item Stash privremeno sakriva necommitane promjene ako se iz nekih razloga treba nesto napraviti bez njih. Promjene ostaju skrivene u stashu dok ih se ne povrati nazad na stage.
+\end{frame}
+
 
 \end{document}
